@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Eventize - Parques Próximos</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0052cc",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1723",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="sticky top-0 z-10 w-full bg-background-light dark:bg-background-dark shadow-sm">
+            <!-- TopAppBar -->
+            <div
+                class="flex items-center bg-background-light dark:bg-background-dark px-4 pt-4 pb-2 justify-between text-slate-900 dark:text-slate-100">
+                <div class="flex size-10 shrink-0 items-center justify-center">
+                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                </div>
+                <h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Parques e Praças</h2>
+                <div class="flex size-10 shrink-0 items-center justify-center"></div>
+            </div>
+            <!-- SearchBar -->
+            <div class="px-4 py-3 bg-background-light dark:bg-background-dark">
+                <label class="flex flex-col min-w-40 h-12 w-full">
+                    <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                        <div
+                            class="text-slate-500 dark:text-slate-400 flex bg-white dark:bg-slate-800 items-center justify-center pl-4 rounded-l-xl">
+                            <span class="material-symbols-outlined text-2xl">search</span>
+                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-white dark:bg-slate-800 h-full placeholder:text-slate-500 dark:placeholder:text-slate-400 px-4 pl-2 text-base font-normal leading-normal"
+                            placeholder="Buscar por parques e locais" value="" />
+                    </div>
+                </label>
+            </div>
+        </div>
+        <!-- Cards Section -->
+        <main class="flex flex-col gap-4 p-4">
+            <!-- Card 1 -->
+            <div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm">
+                <div class="flex flex-[2_2_0px] flex-col gap-3">
+                    <div class="flex flex-col gap-1">
+                        <p class="text-slate-900 dark:text-slate-50 text-base font-bold leading-tight">Parque Verde</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal">1.5 km •
+                            Entrada gratuita • Aberto até 18h</p>
+                    </div>
+                    <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-white text-sm font-medium leading-normal w-fit">
+                        <span>Ir agora</span>
+                    </button>
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1"
+                    data-alt="Sunny day at Parque Verde with lush green trees and a walking path"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDO9Vht098ucws6mEZToayGWF3oAmhgqUEk3I-ctlP9wpTeMO0v54-0CAM_AeWDtCeQeHvKdeTONiT9VhxLd90Q_EEgpvD8C1BIEzeb1GAK_TZMDsepxshPovYIKjVRq3_AzzmXqCKZOmNBab1sCXFUcZUcUBHy5k_T-En0UtlY8A9uhBJI01I2H0Er7nTcjoewYlvI32E2dbFhuEDbmifTblsAZ5GD87Fmjblx7uUDOWO3cX6u-VRPAJMO1JK6WRQgYnEDjHmgXQ");'>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm">
+                <div class="flex flex-[2_2_0px] flex-col gap-3">
+                    <div class="flex flex-col gap-1">
+                        <p class="text-slate-900 dark:text-slate-50 text-base font-bold leading-tight">Jardim Botânico
+                        </p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal">3.2 km •
+                            R$10,00 • Aberto até 17h</p>
+                    </div>
+                    <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-white text-sm font-medium leading-normal w-fit">
+                        <span>Ir agora</span>
+                    </button>
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1"
+                    data-alt="Glass greenhouse of Jardim Botânico surrounded by exotic plants"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA74QIJz6F9bZtj_sxsmZkgCUCt-EkkfTd9jtRJ98LfZn1AF7Czjz96MC5EcX_fED9pnwI0i7vsGofl4TqgiBIENW0PyecbyAOaGyb4JMhehlLUa0nSCqdW5sBEtHinufbMJtDhOe7BxXXjJKInx_N7V95sLUTdUwZ8Exmy1ZUyeo58OsEh12rtIRCeLSXnCWskfBNrov02ag4eEGFEL-O4pRiRMy6k8B_IbCYngAKWy1SHEwiPhrWq5yK4d0bw9fn-iwie7qZPgg");'>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm">
+                <div class="flex flex-[2_2_0px] flex-col gap-3">
+                    <div class="flex flex-col gap-1">
+                        <p class="text-slate-900 dark:text-slate-50 text-base font-bold leading-tight">Praça da
+                            Liberdade</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal">2.1 km •
+                            Entrada gratuita • Aberto 24h</p>
+                    </div>
+                    <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-white text-sm font-medium leading-normal w-fit">
+                        <span>Ir agora</span>
+                    </button>
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1"
+                    data-alt="Fountains and historical buildings at Praça da Liberdade at dusk"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPSiSfxURHGYCy9sGB-1Hh2Z49P20g7QYBAOC0eofpZuiNXRiyu7B406HQbE2EuWHXsm-gBqfRr_jjUeb33hif6HuLekdp5TV3gDJUVMgHhPCYOcSuhl9FMVlXIB5SzsdTLrc8ThmdN8Gz-MUfYxDxCf2Y39AaaDgI6n1ej7eqa9b48eBOo54dzMYxMZyyEwdhfs4fpp6vDy0HdsuAEe25YgMquQfk6rhJs3cTwEDM6f5GTkdpv9kLLQV583r_Hm-2kzdUBAtbLg");'>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm">
+                <div class="flex flex-[2_2_0px] flex-col gap-3">
+                    <div class="flex flex-col gap-1">
+                        <p class="text-slate-900 dark:text-slate-50 text-base font-bold leading-tight">Parque das
+                            Mangabeiras</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal">5.8 km •
+                            Gratuito • Fechado agora</p>
+                    </div>
+                    <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal w-fit">
+                        <span>Ver Rota</span>
+                    </button>
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1"
+                    data-alt="View from a viewpoint at Parque das Mangabeiras overlooking a city"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCDM1NRK6DLdYNmxExY97frkWViswUmSU31d52zNAPrxaqBJZPNvgEi80cc0kMxZMontFHh71o5wMBDznndA4qmljyZwLG8zT_DgEBSqv5llEs5kg1FNZ8-__C5v_htEINlvOqGU1D3PlOq4Ad2rSNyeMqSkTLSgP6DtlBUwjjG6Stp9LU3ZnnFcP6JF_bkesBtKCpBp2ud-S92jaxGKI0YhBd2Wc1d0r7j9V_ApSTLsBeJ2cc63A3DD0wK_65uzIqjPyf8GINqwQ");'>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

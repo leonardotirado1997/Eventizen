@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Eventize - Descubra Eventos</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4F46E5",
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#0f1723",
+                        "text-primary-light": "#212529",
+                        "text-secondary-light": "#6C757D",
+                        "text-primary-dark": "#F8F9FA",
+                        "text-secondary-dark": "#9CA3AF",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E293B",
+                        "chip-light": "#E9ECEF",
+                        "chip-dark": "#334155"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div
+        class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden bg-background-light dark:bg-background-dark">
+        <!-- Top App Bar -->
+        <header
+            class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 p-4 pb-3 backdrop-blur-sm dark:bg-background-dark/80">
+            <div class="flex size-12 shrink-0 items-center">
+                <span class="material-symbols-outlined text-3xl text-primary">stadia_controller</span>
+            </div>
+            <h1
+                class="flex-1 text-xl font-bold leading-tight tracking-tight text-text-primary-light dark:text-text-primary-dark">
+                Eventize</h1>
+            <div class="flex w-12 items-center justify-end">
+                <button
+                    class="flex h-12 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary-light dark:text-text-primary-dark">
+                    <span class="material-symbols-outlined text-2xl">search</span>
+                </button>
+            </div>
+        </header>
+        <!-- Chips Filter -->
+        <nav
+            class="flex gap-2 overflow-x-auto px-4 pb-4 pt-2 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+            <div
+                class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary px-4">
+                <p class="text-sm font-medium leading-normal text-white">Todos</p>
+            </div>
+            <div
+                class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-chip-light px-4 dark:bg-chip-dark">
+                <p class="text-sm font-medium leading-normal text-text-primary-light dark:text-text-primary-dark">Drama
+                </p>
+            </div>
+            <div
+                class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-chip-light px-4 dark:bg-chip-dark">
+                <p class="text-sm font-medium leading-normal text-text-primary-light dark:text-text-primary-dark">
+                    Comédia</p>
+            </div>
+            <div
+                class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-chip-light px-4 dark:bg-chip-dark">
+                <p class="text-sm font-medium leading-normal text-text-primary-light dark:text-text-primary-dark">
+                    Musical</p>
+            </div>
+            <div
+                class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-chip-light px-4 dark:bg-chip-dark">
+                <p class="text-sm font-medium leading-normal text-text-primary-light dark:text-text-primary-dark">
+                    Stand-up</p>
+            </div>
+        </nav>
+        <!-- Event Cards List -->
+        <main class="flex flex-col gap-4 px-4 pb-24">
+            <!-- Card 1 -->
+            <div class="flex flex-col items-stretch justify-start rounded-xl bg-card-light shadow-sm dark:bg-card-dark">
+                <div class="aspect-video w-full rounded-t-xl bg-cover bg-center bg-no-repeat"
+                    data-alt="Actors performing a dramatic scene from Hamlet on a dimly lit stage."
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQLAy_ddw5xkpwZ40V_bFMpR0aNP9Et8mXeobMipz_8rxrHS5twp6qlk6R-8mkCQHDdYK2QTsEsyEHEUwq5M7jVby4XRJWAzm_lI9zBSbm1OlS5i8YI12A7CElcLDGwjBDy1Iw1hNg-9Xd87TzXr8D9CEWgh7aV1edeTrLHyqAOahF55bCaIa1DiARD6tVNWpYfBGMCBD8RXec2_vHfL-c9nhDzf4j450ZKwQzZuBRnIzADA97xdmotFIX1lMK_SF8X5RKZnaA9w");'>
+                </div>
+                <div class="flex flex-col items-stretch justify-center gap-2 p-4">
+                    <p class="text-lg font-bold leading-tight text-text-primary-light dark:text-text-primary-dark">
+                        Hamlet</p>
+                    <div class="flex items-end justify-between gap-3">
+                        <div class="flex flex-col gap-1">
+                            <p
+                                class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">
+                                Sáb, 28 de Setembro - 20:00</p>
+                            <p
+                                class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">
+                                Teatro Principal</p>
+                        </div>
+                        <button
+                            class="flex h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-medium leading-normal text-white">
+                            <span class="truncate">Ingressos</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="flex flex-col items-stretch justify-start rounded-xl bg-card-light shadow-sm dark:bg-card-dark">
+                <div class="aspect-video w-full rounded-t-xl bg-cover bg-center bg-no-repeat"
+                    data-alt="A grand musical scene from The Phantom of the Opera, with chandeliers and elaborate costumes."
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChIs5n7-Ax4FhGq6pUAbSqSvfVYO_PI6zNAtV2SWCR8ONxST7Ywa072ntAXc1QX723pp7mbQDpA0mrfoiv3R_yogjyUqyzYMvZXi7Aw1t59KHZzppyEfXlFu3aq92rBPK_vfHKGabtKagGHSt7q5h_JlGc7P5eLJnIJLfXfYC2hUQfV_VwZWKR8jEMVEAdFT71ttFbwywOLICmPvFDtrOumTjGhMSO5thEQzW_7pbuEb2tFGZGFhX2Q0iEl2pVOjwXEOoynT9aew");'>
+                </div>
+                <div class="flex flex-col items-stretch justify-center gap-2 p-4">
+                    <p class="text-lg font-bold leading-tight text-text-primary-light dark:text-text-primary-dark">O
+                        Fantasma da Ópera</p>
+                    <div class="flex items-end justify-between gap-3">
+                        <div class="flex flex-col gap-1">
+                            <p
+                                class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">
+                                Dom, 29 de Setembro - 19:30</p>
+                            <p
+                                class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">
+                                Ópera de Arame</p>
+                        </div>
+                        <button
+                            class="flex h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-medium leading-normal text-white">
+                            <span class="truncate">Ingressos</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="flex flex-col items-stretch justify-start rounded-xl bg-card-light shadow-sm dark:bg-card-dark">
+                <div class="aspect-video w-full rounded-t-xl bg-cover bg-center bg-no-repeat"
+                    data-alt="A powerful scene from Les Misérables with actors on a barricade set."
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGqO3HndQIGsOna2cXdYc_e3PQkBB_sT7hn9V6SXqOhjZs9GMY2ah43MIpqGQkqwW1k3GhQk-Y9iE9RXu4FjGoTXtFw2Rdjurz3Z44DFZnzdfAsjnBPhgRD1ek0cDpeP9Aq73f2GX-VR4KAMcQ0i3ZY0KwBgNa9CyLRzUrg6ocbsOJ_aMyuxvKO2M5d3iQABHumISzwhGzx_ik0CNbQU3WVl8Xfhr_QgX0N-Yj8swy8IGKdgK6oX5feYbQ29H0ZTd3GOoPeiS5IA");'>
+                </div>
+                <div class="flex flex-col items-stretch justify-center gap-2 p-4">
+                    <p class="text-lg font-bold leading-tight text-text-primary-light dark:text-text-primary-dark">Les
+                        Misérables</p>
+                    <div class="flex items-end justify-between gap-3">
+                        <div class="flex flex-col gap-1">
+                            <p
+                                class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">
+                                Sex, 04 de Outubro - 21:00</p>
+                            <p
+                                class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">
+                                Teatro Guaíra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Bottom Navigation Bar -->
+        <nav
+            class="fixed bottom-0 z-10 grid h-20 w-full max-w-md grid-cols-4 items-center border-t border-gray-200 bg-background-light/95 backdrop-blur-sm dark:border-gray-700 dark:bg-background-dark/95">
+            <a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+                <span class="material-symbols-outlined">home</span>
+                <span class="text-xs font-medium">Início</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-text-secondary-light dark:text-text-secondary-dark"
+                href="#">
+                <span class="material-symbols-outlined">search</span>
+                <span class="text-xs font-medium">Buscar</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-text-secondary-light dark:text-text-secondary-dark"
+                href="#">
+                <span class="material-symbols-outlined">confirmation_number</span>
+                <span class="text-xs font-medium">Ingressos</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-text-secondary-light dark:text-text-secondary-dark"
+                href="#">
+                <span class="material-symbols-outlined">person</span>
+                <span class="text-xs font-medium">Perfil</span>
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

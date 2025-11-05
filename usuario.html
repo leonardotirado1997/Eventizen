@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Eventize - Meu Perfil</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a54c2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div
+        class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden text-[#111418] dark:text-gray-200">
+        <!-- Top App Bar -->
+        <div
+            class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
+            <div class="flex size-12 shrink-0 items-center">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            </div>
+            <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Meu Perfil</h2>
+            <div class="flex w-12 items-center justify-end">
+                <button
+                    class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+                    <span class="material-symbols-outlined text-2xl">settings</span>
+                </button>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <main class="flex-1 pb-8">
+            <!-- Profile Header -->
+            <div class="p-4 @container">
+                <div
+                    class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+                    <div class="flex gap-4 items-center">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-24 h-24 shrink-0"
+                            data-alt="User's profile picture placeholder"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmYbUIV9LloG8wAeQGy8V5UcP33oIyoUkgaRxaO4Q676fmM4JxrNuMw9c9ek_IAsQg9zyZk88mtvgqPF9Nt962CtrQtEYDkS6qsp0aE0CzlGXF5TUOpQPq-pccANiuJ7hSVf-oYDRNA7tVsblsOK6DFU4cmRH_Z4i7dAc7OcTtI_PKUk2DAqkadijANTiYHVTIpci-7RCHwbP4xcmPTUeWdIXfl4ZnDx-a3kWSKvxVzAWx1EAVoYcfluj_AP4OsVXLoQgj1xYE2Q");'>
+                        </div>
+                        <div class="flex flex-col justify-center gap-1">
+                            <p class="text-[22px] font-bold leading-tight tracking-[-0.015em]">Carlos Silva</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
+                                carlos.silva@exemplo.com | 25 anos</p>
+                            <div
+                                class="inline-flex items-center gap-1.5 bg-[#FFD700] text-black px-2.5 py-1 rounded-full w-fit mt-1">
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <p class="text-sm font-bold leading-normal">1,250 Pontos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Statistics Section -->
+            <div>
+                <h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Minhas Estatísticas
+                </h2>
+                <div class="px-4">
+                    <div class="flex w-full rounded-lg bg-gray-200 dark:bg-gray-800 p-1">
+                        <button
+                            class="flex-1 rounded-md bg-white dark:bg-gray-900 py-2 text-center text-sm font-semibold text-primary">Municipal</button>
+                        <button
+                            class="flex-1 rounded-md py-2 text-center text-sm font-medium text-gray-600 dark:text-gray-300">Estadual</button>
+                        <button
+                            class="flex-1 rounded-md py-2 text-center text-sm font-medium text-gray-600 dark:text-gray-300">Nacional</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-4 p-4">
+                    <div
+                        class="flex items-center justify-between rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 p-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                <span class="material-symbols-outlined text-3xl">emoji_events</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Ranking Municipal</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Sua posição na cidade</p>
+                            </div>
+                        </div>
+                        <p class="text-2xl font-bold text-primary">#12</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Rewards CTA -->
+            <div class="px-4 pt-4">
+                <button
+                    class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-white gap-2 text-base font-bold leading-normal tracking-[0.015em]">
+                    Ver Recompensas
+                    <span class="material-symbols-outlined">redeem</span>
+                </button>
+            </div>
+            <!-- Event History -->
+            <div>
+                <h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8">Histórico de Eventos
+                </h2>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-4 bg-transparent px-4 min-h-[72px] py-2 justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
+                                data-alt="Summer Festival event poster"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGtBm7R_VSr8EcntGHEjOc5btaDGWO_1Le7Ka04iz9JYAVHS3Pwnh7hhgl6bPQETmlId39WENlx_8agsedgdQpbTT5tu69oWJ8HCeifpO-9n4H7T5a-E9pBuXA6MxqprPQ729SSOmiX73BT4Q_Xr1AHzfslWAAQt90fiOInhsC8jqnPQciCPDBVaYNz_SoYfUsw0ZacqhVtIyH8_-aF1Fn3dPfDchscCCxdxuCQFjDrKTwza-KiDp2XI_PecTfBMhdUfYXoqmbVQ");'>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-base font-medium leading-normal line-clamp-1">Festival de Verão</p>
+                                <p
+                                    class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">
+                                    15 de Jan, 2024 - Praça Central</p>
+                            </div>
+                        </div>
+                        <div class="shrink-0">
+                            <div class="flex size-7 items-center justify-center">
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-transparent px-4 min-h-[72px] py-2 justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
+                                data-alt="Acoustic show event poster"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrYFG6VsDNReLVGiPjZUKWI2N3jypuLcXu-AgHeAPANS32900QTPissZTDlTZ3fw-_xsCfBZj92vuSDGZE90J8MC6ANqK2LK_FsulyZ8mWow2-cFRNvRoYJByqrWdc_VA1RyWinyzAnWvnOp0r0dvh8OkEj_cX-99aVrUDl0SejztgrcpLlI2ZRVBI3-i2leOrNTdKGWuSyCsJ1tQb_PchoTyX0XOxzAd775oWizr4fCyL1StXVIPu53WuspfUCFJ1k20MyAdCBA");'>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-base font-medium leading-normal line-clamp-1">Show Acústico</p>
+                                <p
+                                    class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">
+                                    02 de Fev, 2024 - Teatro Municipal</p>
+                            </div>
+                        </div>
+                        <div class="shrink-0">
+                            <div class="flex size-7 items-center justify-center">
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-transparent px-4 min-h-[72px] py-2 justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
+                                data-alt="Gastronomy Fair event poster"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcX4NljgaNcMEriyOQ0H4LVHqE5WZm8ESNSGSlB4K0qklLoclCjuuvedrgBNA5oRfii39cxeN4q89zd-vioOx1y5YWh4C7JfBumtqb9Qk3oErfFReFtbVTeRSGVRmX88Pv3fkHO1abd3NIyf3ZVGkthagw7qL0JZY58nBQZaoQuP3RqEukYKetsPyJzduIi5xjQRElbXJXWtEJYQirsPlA39Htzg7DXqLA6s0lqk2vUY_MZZqkU7op3-AifMUjIEw7vXaYxXHgJw");'>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-base font-medium leading-normal line-clamp-1">Feira Gastronômica</p>
+                                <p
+                                    class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">
+                                    28 de Fev, 2024 - Parque da Cidade</p>
+                            </div>
+                        </div>
+                        <div class="shrink-0">
+                            <div class="flex size-7 items-center justify-center">
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

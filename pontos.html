@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Eventize - Vouchers e Recompensas</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A00E0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1723",
+                        "text-light": "#333333",
+                        "text-dark": "#f8fafc",
+                        "text-disabled": "#BDBDBD",
+                        "bg-disabled": "#e0e0e0"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-display">
+    <div
+        class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+        <!-- Top App Bar -->
+        <div class="sticky top-0 z-10 flex items-center justify-between bg-white dark:bg-background-dark p-4 shadow-sm">
+            <div class="flex size-10 shrink-0 items-center justify-center text-text-light dark:text-text-dark">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            </div>
+            <h1 class="flex-1 text-center text-lg font-bold tracking-tight text-text-light dark:text-text-dark">Vouchers
+                e Recompensas</h1>
+            <div class="w-10"></div> <!-- Spacer to balance the back button -->
+        </div>
+        <main class="flex-1">
+            <!-- User Points Balance Card -->
+            <div class="p-4 @container">
+                <div
+                    class="flex flex-col items-start justify-start rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] bg-white dark:bg-slate-800 p-4">
+                    <p class="text-xl font-bold leading-tight tracking-tighter text-text-light dark:text-text-dark">Seus
+                        pontos: 1.250</p>
+                    <p class="mt-1 text-base font-normal leading-normal text-slate-500 dark:text-slate-400">Continue
+                        participando de eventos para ganhar mais!</p>
+                </div>
+            </div>
+            <!-- Section Header -->
+            <h2
+                class="text-lg font-bold leading-tight tracking-tight text-text-light dark:text-text-dark px-4 pt-4 pb-2">
+                Troque Seus Pontos</h2>
+            <!-- Rewards List -->
+            <div class="flex flex-col gap-3 px-4 pb-4">
+                <!-- Reward Item Card 1 (Enabled) -->
+                <div
+                    class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                    <div class="flex flex-[2_2_0px] flex-col gap-4">
+                        <div class="flex flex-col gap-1">
+                            <p class="text-base font-bold leading-tight text-text-light dark:text-text-dark">Voucher de
+                                R$50 no evento Y</p>
+                            <p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">Custo: 1000
+                                pontos</p>
+                        </div>
+                        <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-white text-sm font-medium leading-normal shadow-sm transition-opacity hover:opacity-90 w-fit">
+                            <span class="truncate">Trocar</span>
+                        </button>
+                    </div>
+                    <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1"
+                        data-alt="Logo of a sponsoring partner for Event Y"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDH0sxMnAHm9TTT5Ni3Rn6jCznex5RQzO9ew_XPFskKoAXNibFEqnieqVgre2JsqCJGnxKm4dsVX34uOoqe_on0zmqDbEyCFupxQHdF0xXT4WqyhIBjMOSBJltoC9shq67rFItxj-Z_iPRdcJHcoOkzRCjEYRBj5s81vRtaso4hAhmZZsIlo6OwNjwrsQW7sE6yQ9-JDKiC3KWThZHd47-7104ay7j_LN2MFb3jaJ6t2q8eOy6MRPA9y8E2ebK-d4WaR4DELOHMRQ");'>
+                    </div>
+                </div>
+                <!-- Reward Item Card 2 (Disabled) -->
+                <div
+                    class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                    <div class="flex flex-[2_2_0px] flex-col gap-4">
+                        <div class="flex flex-col gap-1">
+                            <p class="text-base font-bold leading-tight text-text-light dark:text-text-dark">Par de
+                                ingressos para o Festival Z</p>
+                            <p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">Custo: 3000
+                                pontos</p>
+                        </div>
+                        <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-not-allowed items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-bg-disabled text-text-disabled dark:bg-slate-600 dark:text-slate-400 text-sm font-medium leading-normal w-fit"
+                            disabled="">
+                            <span class="truncate">Pontos insuficientes</span>
+                        </button>
+                    </div>
+                    <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1"
+                        data-alt="Image of two tickets for a music festival"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBq1kZ3inbQh-lwKiM2I_C1Me0z585nwvkmzyoFFPd7H1n3Dbv_-f_EO9rQjI-BKhoGUSRp-z1KBtRu2u35s8SCA93P3_lA_Sm1rDISiwTyu3zrcquAUY2-eoj6FSQQEIRgfqF27wFOP5AZu0sIzsEo6_Isb2lqMJvWmEVVF_Q4TuZhaCBX-ICJ7JW2DY7TzXHMUtOzgmzykyBCWDa60HXZnIUH6M27w2oQEqdeFKJsOE_Z8DcmR68Wfe_tKIby1gNULtaunAIaXw");'>
+                    </div>
+                </div>
+                <!-- Reward Item Card 3 (Enabled) -->
+                <div
+                    class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                    <div class="flex flex-[2_2_0px] flex-col gap-4">
+                        <div class="flex flex-col gap-1">
+                            <p class="text-base font-bold leading-tight text-text-light dark:text-text-dark">Drink
+                                grátis no Bar B</p>
+                            <p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">Custo: 450
+                                pontos</p>
+                        </div>
+                        <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-white text-sm font-medium leading-normal shadow-sm transition-opacity hover:opacity-90 w-fit">
+                            <span class="truncate">Trocar</span>
+                        </button>
+                    </div>
+                    <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1"
+                        data-alt="A colorful cocktail drink at a bar"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSQYmT6OXGQo5A-aZo4C8bEI3SOMJiGQcHclhscxJB7SV2Q6mD8w8IFa67NP8iqLjokV-Slmf912aNbWb3O5gAh3l3MWKMnaRWfbG0vYRaH5rSbKVNjG_Rlfr3cDqMfLWKP7nXX9h-eglUfqpm73eXl-uy-PMK5GTa1H12ynUj6cGfN5oZ7rQLTzD2T4FdXF0fj0Y7-A8eTA8gABHRq8p7_7XbRiBGVy_1GjfugkcPUSoDe_5NqHjXqw3ZFKEkHLd1Cp_mUeWe7A");'>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
