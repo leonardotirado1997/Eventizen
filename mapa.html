@@ -61,26 +61,78 @@
             </a>
             <h1
                 class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em] absolute left-1/2 -translate-x-1/2">
-                Mapa de Eventos</h1>
+                <img alt="Eventize Logo" class="h-6 mx-auto rounded-full" src="Eventize.png" />
+            </h1>
         </header>
-        <main class="flex-1">
-            <!-- Map Container -->
-            <div class="w-full h-[calc(100vh-80px)] bg-slate-200 dark:bg-slate-800 flex items-center justify-center relative">
-                <!-- Placeholder Map -->
-                <div class="flex flex-col items-center justify-center gap-4 text-center p-8">
-                    <span class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-600">map</span>
-                    <div class="flex flex-col gap-2">
-                        <h2 class="text-slate-700 dark:text-slate-300 text-xl font-bold">Mapa de Eventos</h2>
-                        <p class="text-slate-500 dark:text-slate-400 text-base">
-                            Veja todos os eventos próximos a você
-                        </p>
+        <main class="flex-1 relative">
+            <!-- Map Container with Background Pattern -->
+            <div class="w-full h-[calc(100vh-80px)] bg-gradient-to-br from-green-100 to-blue-100 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden">
+                <!-- Map Pattern Background -->
+                <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+                
+                <!-- Map Content -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <!-- Map View -->
+                    <div class="relative w-full h-full max-w-4xl mx-auto">
+                        <!-- Streets/Grid Pattern -->
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+                            <!-- Horizontal streets -->
+                            <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(0,0,0,0.1)" stroke-width="2" />
+                            <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(0,0,0,0.1)" stroke-width="2" />
+                            <line x1="0" y1="300" x2="400" y2="300" stroke="rgba(0,0,0,0.1)" stroke-width="2" />
+                            <!-- Vertical streets -->
+                            <line x1="100" y1="0" x2="100" y2="400" stroke="rgba(0,0,0,0.1)" stroke-width="2" />
+                            <line x1="200" y1="0" x2="200" y2="400" stroke="rgba(0,0,0,0.1)" stroke-width="2" />
+                            <line x1="300" y1="0" x2="300" y2="400" stroke="rgba(0,0,0,0.1)" stroke-width="2" />
+                        </svg>
+                        
+                        <!-- Event Markers -->
+                        <div class="absolute top-[20%] left-[25%] transform -translate-x-1/2 -translate-y-1/2">
+                            <div class="relative">
+                                <div class="w-10 h-10 bg-primary rounded-full border-4 border-white shadow-xl cursor-pointer hover:scale-110 transition-transform flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-lg">music_note</span>
+                                </div>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full border-2 border-white"></div>
+                            </div>
+                            <div class="absolute top-12 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2 min-w-[120px] mt-2">
+                                <p class="text-xs font-semibold text-slate-900 dark:text-slate-100">Show ao Vivo</p>
+                                <p class="text-xs text-slate-600 dark:text-slate-400">2 km</p>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute top-[40%] right-[25%] transform translate-x-1/2 -translate-y-1/2">
+                            <div class="relative">
+                                <div class="w-10 h-10 bg-primary rounded-full border-4 border-white shadow-xl cursor-pointer hover:scale-110 transition-transform flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-lg">theater_comedy</span>
+                                </div>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full border-2 border-white"></div>
+                            </div>
+                            <div class="absolute top-12 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2 min-w-[120px] mt-2">
+                                <p class="text-xs font-semibold text-slate-900 dark:text-slate-100">Teatro</p>
+                                <p class="text-xs text-slate-600 dark:text-slate-400">5 km</p>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-[35%] left-[35%] transform -translate-x-1/2 translate-y-1/2">
+                            <div class="relative">
+                                <div class="w-10 h-10 bg-primary rounded-full border-4 border-white shadow-xl cursor-pointer hover:scale-110 transition-transform flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-lg">restaurant</span>
+                                </div>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full border-2 border-white"></div>
+                            </div>
+                            <div class="absolute top-12 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2 min-w-[120px] mt-2">
+                                <p class="text-xs font-semibold text-slate-900 dark:text-slate-100">Festival</p>
+                                <p class="text-xs text-slate-600 dark:text-slate-400">1 km</p>
+                            </div>
+                        </div>
+                        
+                        <!-- User Location Marker -->
+                        <div class="absolute bottom-[20%] left-[50%] transform -translate-x-1/2 translate-y-1/2">
+                            <div class="w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-xl animate-pulse"></div>
+                            <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Event Markers (Example) -->
-                <div class="absolute top-20 left-1/4 w-8 h-8 bg-primary rounded-full border-2 border-white shadow-lg cursor-pointer hover:scale-110 transition-transform"></div>
-                <div class="absolute top-1/3 right-1/4 w-8 h-8 bg-primary rounded-full border-2 border-white shadow-lg cursor-pointer hover:scale-110 transition-transform"></div>
-                <div class="absolute bottom-1/3 left-1/3 w-8 h-8 bg-primary rounded-full border-2 border-white shadow-lg cursor-pointer hover:scale-110 transition-transform"></div>
             </div>
             
             <!-- Quick Actions -->
@@ -97,4 +149,3 @@
 </body>
 <script src="transitions.js"></script>
 </html>
-

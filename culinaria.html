@@ -58,9 +58,13 @@
 <!-- Top App Bar Section -->
 <header class="sticky top-0 z-10 flex flex-col gap-2 bg-surface-light dark:bg-surface-dark p-4 pb-2 shadow-sm">
 <div class="flex items-center h-12 justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-text-light dark:text-text-dark text-2xl">location_on</span>
-<p class="text-text-light dark:text-text-dark tracking-light text-base font-bold leading-tight">Rua Fictícia, 123</p>
+<a href="javascript:history.back()">
+<div class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark text-2xl">arrow_back</span>
+</div>
+</a>
+<div class="flex-1 flex items-center justify-center">
+<img alt="Eventize Logo" class="h-6 rounded-full" src="Eventize.png" />
 </div>
 <div class="flex w-12 items-center justify-end">
 <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-text-light dark:text-text-dark">
@@ -199,10 +203,10 @@
 <span class="material-symbols-outlined text-2xl">confirmation_number</span>
 <p class="text-xs font-medium">Ingressos</p>
 </button>
-<button class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark">
+<a href="usuario.html" class="flex flex-col items-center justify-center gap-1 text-subtext-light dark:text-subtext-dark">
 <span class="material-symbols-outlined text-2xl">person</span>
 <p class="text-xs font-medium">Perfil</p>
-</button>
+</a>
 </nav>
 </div>
 </body>

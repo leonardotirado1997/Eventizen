@@ -176,9 +176,10 @@
                 const logo = document.createElement('img');
                 logo.src = 'Eventize.png';
                 logo.alt = 'Eventize Logo';
-                logo.className = 'h-6 mx-auto logo-animate';
+                logo.className = 'h-6 mx-auto logo-animate rounded-full';
                 logo.style.maxWidth = '100px';
                 logo.style.height = 'auto';
+                logo.style.borderRadius = '50%';
                 
                 // Se o título está centralizado, substituir conteúdo
                 if (title.classList.contains('text-center') || title.style.textAlign === 'center') {
