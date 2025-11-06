@@ -24,6 +24,9 @@
     }
 
     function init() {
+        // Limpar overlay e classes de transição imediatamente ao carregar
+        cleanupTransitions();
+        
         // Adicionar classe de carregamento ao body
         document.body.classList.add('page-loaded');
         
@@ -38,6 +41,23 @@
         
         // Adicionar animações aos elementos principais
         animatePageElements();
+    }
+
+    // Limpar transições e overlay
+    function cleanupTransitions() {
+        // Remover classes de transição
+        document.body.classList.remove('transitioning', 'page-exit');
+        
+        // Remover overlay se existir
+        const overlay = document.querySelector('.transition-overlay');
+        if (overlay) {
+            overlay.classList.remove('active');
+            setTimeout(() => {
+                if (overlay.parentNode) {
+                    overlay.remove();
+                }
+            }, 100);
+        }
     }
 
     // Interceptar cliques em links internos
@@ -220,15 +240,20 @@
 
     // Limpar classes de transição após animação
     window.addEventListener('load', function() {
-        setTimeout(() => {
-            document.body.classList.remove('transitioning', 'page-exit');
-            const overlay = document.querySelector('.transition-overlay');
-            if (overlay) {
-                overlay.classList.remove('active');
-                setTimeout(() => overlay.remove(), 300);
-            }
-        }, TRANSITION_CONFIG.duration);
+        cleanupTransitions();
     });
+
+    // Limpar também quando a página fica visível (ao voltar com back button)
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+            cleanupTransitions();
+        }
+    });
+
+    // Limpar ao carregar completamente
+    if (document.readyState === 'complete') {
+        cleanupTransitions();
+    }
 
     // Expor configuração globalmente para fácil customização
     window.PageTransitions = {

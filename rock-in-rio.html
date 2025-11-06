@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Eventize - Rock in Rio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="transitions.css">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0052cc",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1723",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-display">
+    <div
+        class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+        <header
+            class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark/80 dark:backdrop-blur-sm p-4 pb-3 justify-between border-b border-slate-200 dark:border-slate-800">
+            <a href="javascript:history.back()">
+            <button
+                class="text-slate-800 dark:text-slate-200 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            </button>
+            </a>
+            <h1
+                class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em] absolute left-1/2 -translate-x-1/2">
+                Rock in Rio</h1>
+        </header>
+        <main class="flex-1 p-4">
+            <div class="flex flex-col gap-6">
+                <!-- Hero Image -->
+                <div class="w-full rounded-xl overflow-hidden shadow-lg">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                        data-alt="Rock in Rio festival stage with crowd"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHidRz-2Oga8mYgFtORm_okn-z3---Dym61tC5x6fsKi1e3vJEZ-FaCwVGjA0RccGOjr12S2dSm_xlLrsA60fKs68JO_K8fWCHTbvIdwUjsc3aQgZW2nHHla538oa3sRxxVCu8kuICd70KRz3F5d3c9asJiF1635Hnw7QTVeEYbMXd1uEY1ci56EpRTkfVD-h7EOSlq8vZt2J5QusOOoznYECmx2BPBf1Ar12-ZmYjrd_8F1WoZTmMcT7N6qWqMFNppZouKz5o1w");'>
+                    </div>
+                </div>
+                
+                <!-- Event Info -->
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-slate-900 dark:text-slate-50 text-2xl font-bold leading-tight">Rock in Rio</h2>
+                    
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-xl">calendar_today</span>
+                            <p class="text-slate-600 dark:text-slate-400 text-base">Data: Em breve</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                            <p class="text-slate-600 dark:text-slate-400 text-base">Parque Olímpico, Rio de Janeiro</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-xl">music_note</span>
+                            <p class="text-slate-600 dark:text-slate-400 text-base">Festival de música</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-slate-700 dark:text-slate-300 text-base leading-relaxed">
+                        O maior festival de música do mundo está de volta! Prepare-se para uma experiência única com os maiores nomes do rock, pop e música eletrônica.
+                    </p>
+                    
+                    <button
+                        class="mt-4 w-full text-center text-white bg-primary hover:bg-primary/90 text-base font-semibold py-3 px-4 rounded-lg transition-colors">
+                        Ver mais informações
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="transitions.js"></script>
+</html>
+
