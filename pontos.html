@@ -11,6 +11,7 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="transitions.css">
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -56,9 +57,11 @@
         class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
         <!-- Top App Bar -->
         <div class="sticky top-0 z-10 flex items-center justify-between bg-white dark:bg-background-dark p-4 shadow-sm">
-            <div class="flex size-10 shrink-0 items-center justify-center text-text-light dark:text-text-dark">
-                <span class="material-symbols-outlined text-2xl">arrow_back</span>
-            </div>
+            <a href="javascript:history.back()">
+                <div class="flex size-10 shrink-0 items-center justify-center text-text-light dark:text-text-dark cursor-pointer">
+                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                </div>
+            </a>
             <h1 class="flex-1 text-center text-lg font-bold tracking-tight text-text-light dark:text-text-dark">Vouchers
                 e Recompensas</h1>
             <div class="w-10"></div> <!-- Spacer to balance the back button -->
@@ -145,5 +148,5 @@
         </main>
     </div>
 </body>
-
+<script src="transitions.js"></script>
 </html>

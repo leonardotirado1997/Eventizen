@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="transitions.css">
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -57,9 +58,11 @@
         <!-- Top App Bar -->
         <div
             class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
-            <div class="flex size-12 shrink-0 items-center">
-                <span class="material-symbols-outlined text-2xl">arrow_back</span>
-            </div>
+            <a href="javascript:history.back()">
+                <div class="flex size-12 shrink-0 items-center cursor-pointer">
+                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                </div>
+            </a>
             <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Meu Perfil</h2>
             <div class="flex w-12 items-center justify-end">
                 <button
@@ -198,5 +201,5 @@
         </main>
     </div>
 </body>
-
+<script src="transitions.js"></script>
 </html>

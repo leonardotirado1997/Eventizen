@@ -11,6 +11,7 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="transitions.css">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -52,9 +53,11 @@
             <!-- TopAppBar -->
             <div
                 class="flex items-center bg-background-light dark:bg-background-dark px-4 pt-4 pb-2 justify-between text-slate-900 dark:text-slate-100">
-                <div class="flex size-10 shrink-0 items-center justify-center">
-                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
-                </div>
+                <a href="javascript:history.back()">
+                    <div class="flex size-10 shrink-0 items-center justify-center cursor-pointer">
+                        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                    </div>
+                </a>
                 <h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Parques e Praças</h2>
                 <div class="flex size-10 shrink-0 items-center justify-center"></div>
             </div>
@@ -153,5 +156,5 @@
         </main>
     </div>
 </body>
-
+<script src="transitions.js"></script>
 </html>

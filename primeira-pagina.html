@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="transitions.css">
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -53,8 +54,7 @@
             class="flex items-center bg-surface-light dark:bg-surface-dark p-4 pb-2 justify-between sticky top-0 z-10 shadow-sm">
             <div class="w-12"></div>
             <h1 class="text-xl font-bold leading-tight tracking-tight flex-1 text-center">
-                <img alt="Eventize Logo" class="h-8 mx-auto"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_dtz_BmLiqZ5EbA7-bOzC3lMIeJO_fO0HIYnSR6k2UBdxPE_RVXjAFKGS29CeVkLyi8vXcqeIy6zdfWXzoZhYtCRuVSiTey1ipYl8zmGriQQ3hvSHgk4g7syepfMkjF-BWDJMs4sD9oo5Lrj4rvu0AmWNq6gwTTn0CHlMDGYsX2MvJs64vLwpgkdGy4Sho33vCE1LYuq85GzbRz9dKat1CH9ccVJXV-VskwCBmgsJ8qx5Qayp6q4x6-dJ83qc3d-w3NFFBqSXSw" />
+                <img alt="Eventize Logo" class="h-6 mx-auto" src="Eventize.png" />
             </h1>
             <div class="flex w-12 items-center justify-end">
                 <!-- Placeholder for a potential icon like notifications or profile -->
@@ -83,32 +83,41 @@
                     <div class="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
                         <span class="material-symbols-outlined text-3xl">music_note</span>
                     </div>
-                    <p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">
-                        Shows</p>
+                    <a href="shows.html">
+                        <p
+                            class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">
+                            Shows</p>
+                    </a>
                 </div>
                 <div
                     class="flex h-full flex-1 flex-col gap-3 rounded-xl min-w-[10rem] bg-surface-light dark:bg-surface-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] p-4 items-center justify-center text-center">
                     <div class="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
                         <span class="material-symbols-outlined text-3xl">account_balance</span>
                     </div>
-                    <p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">
-                        Pontos Turísticos</p>
+                    <a href="pontos.html">
+                        <p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">
+                            Pontos Turísticos</p>
+                    </a>
                 </div>
                 <div
                     class="flex h-full flex-1 flex-col gap-3 rounded-xl min-w-[10rem] bg-surface-light dark:bg-surface-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] p-4 items-center justify-center text-center">
                     <div class="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
                         <span class="material-symbols-outlined text-3xl">theater_comedy</span>
                     </div>
-                    <p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">
-                        Teatro</p>
+                    <a href="teatro.html">
+                        <p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">
+                            Teatro</p>
+                    </a>
                 </div>
                 <div
                     class="flex h-full flex-1 flex-col gap-3 rounded-xl min-w-[10rem] bg-surface-light dark:bg-surface-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] p-4 items-center justify-center text-center">
                     <div class="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
                         <span class="material-symbols-outlined text-3xl">restaurant</span>
                     </div>
-                    <p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">
-                        Culinária</p>
+                    <a href="culinaria.html">
+                        <p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">
+                            Culinária</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -119,70 +128,76 @@
         <!-- Event Cards Feed -->
         <div class="flex flex-col gap-4 px-4 pb-8">
             <!-- Event Card 1 -->
-            <div
-                class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-surface-light dark:bg-surface-dark">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover"
-                    data-alt="A band playing samba music on a stage with colorful lights"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHidRz-2Oga8mYgFtORm_okn-z3---Dym61tC5x6fsKi1e3vJEZ-FaCwVGjA0RccGOjr12S2dSm_xlLrsA60fKs68JO_K8fWCHTbvIdwUjsc3aQgZW2nHHla538oa3sRxxVCu8kuICd70KRz3F5d3c9asJiF1635Hnw7QTVeEYbMXd1uEY1ci56EpRTkfVD-h7EOSlq8vZt2J5QusOOoznYECmx2BPBf1Ar12-ZmYjrd_8F1WoZTmMcT7N6qWqMFNppZouKz5o1w");'>
-                </div>
-                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1.5 p-4">
-                    <p
-                        class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">
-                        Grupo Paquerada</p>
-                    <div class="flex flex-col gap-1">
+            <a href="shows.html">
+                <div
+                    class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-surface-light dark:bg-surface-dark cursor-pointer hover:shadow-[0_6px_16px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                        data-alt="A band playing samba music on a stage with colorful lights"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHidRz-2Oga8mYgFtORm_okn-z3---Dym61tC5x6fsKi1e3vJEZ-FaCwVGjA0RccGOjr12S2dSm_xlLrsA60fKs68JO_K8fWCHTbvIdwUjsc3aQgZW2nHHla538oa3sRxxVCu8kuICd70KRz3F5d3c9asJiF1635Hnw7QTVeEYbMXd1uEY1ci56EpRTkfVD-h7EOSlq8vZt2J5QusOOoznYECmx2BPBf1Ar12-ZmYjrd_8F1WoZTmMcT7N6qWqMFNppZouKz5o1w");'>
+                    </div>
+                    <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1.5 p-4">
                         <p
-                            class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
-                            2 km de você • Bar da Júlia</p>
-                        <p
-                            class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
-                            Hoje, 19h</p>
+                            class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">
+                            Grupo Paquerada</p>
+                        <div class="flex flex-col gap-1">
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
+                                2 km de você • Bar da Júlia</p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
+                                Hoje, 19h</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- Event Card 2 -->
-            <div
-                class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-surface-light dark:bg-surface-dark">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover"
-                    data-alt="A brightly lit theater stage with red curtains"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDamj5fR77gYxnyPn9bYMaNM-lK4p56Y1NtatisPB77mksxwB9U28Ir5KsLfPPdCBDLY40zHLOowQjueoxdzzkQgHnHeCSHaxW16Ht-qCn_2wCiQag9fAMUIkdh9jCjm6EQgN2_4dVxaItBEMKdWZJxStDx8fKx0Fxw9OEKfHaWlZWbOL54Zlvl2HaLTcR5REsTRqNNtVcbPRRdEuf-_lBI2uUn7Sg-dR-MxHrVlHLylwvMJ2PEu3A3SjQwvP26N92texhKEB-odg");'>
-                </div>
-                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1.5 p-4">
-                    <p
-                        class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">
-                        Comédia Stand-up: Noite de Risos</p>
-                    <div class="flex flex-col gap-1">
+            <a href="teatro.html">
+                <div
+                    class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-surface-light dark:bg-surface-dark cursor-pointer hover:shadow-[0_6px_16px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                        data-alt="A brightly lit theater stage with red curtains"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDamj5fR77gYxnyPn9bYMaNM-lK4p56Y1NtatisPB77mksxwB9U28Ir5KsLfPPdCBDLY40zHLOowQjueoxdzzkQgHnHeCSHaxW16Ht-qCn_2wCiQag9fAMUIkdh9jCjm6EQgN2_4dVxaItBEMKdWZJxStDx8fKx0Fxw9OEKfHaWlZWbOL54Zlvl2HaLTcR5REsTRqNNtVcbPRRdEuf-_lBI2uUn7Sg-dR-MxHrVlHLylwvMJ2PEu3A3SjQwvP26N92texhKEB-odg");'>
+                    </div>
+                    <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1.5 p-4">
                         <p
-                            class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
-                            5 km de você • Teatro Municipal</p>
-                        <p
-                            class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
-                            Amanhã, 21h</p>
+                            class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">
+                            Comédia Stand-up: Noite de Risos</p>
+                        <div class="flex flex-col gap-1">
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
+                                5 km de você • Teatro Municipal</p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
+                                Amanhã, 21h</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- Event Card 3 -->
-            <div
-                class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-surface-light dark:bg-surface-dark">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover"
-                    data-alt="An assortment of gourmet food on a dark table"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoZmirngNnNAHvIGiPEQfwdZVwE63SfKJtey2gGKVlOc-tGESEP3KU9d5y-FGd2_DfG7si3b2Na99Bmp0x6RiD_wwjvU4sC7hRGQBjWWw8UbNDYuoaFB2l1uqXIXIN-HJijyuWzi1vTQdrHxZWqKQTqjfuyfEG2GJexR_HjARPjtBa-OrfOFldi-lSx_L5h-yHIFec9_2R2PXynGHJZgOgJl2v1Gp2Q33DIdTz_d6AUHxPE-nfhGNSjEzaaqayabEoFmTk0J61eA");'>
-                </div>
-                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1.5 p-4">
-                    <p
-                        class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">
-                        Festival Gastronômico Sabor da Cidade</p>
-                    <div class="flex flex-col gap-1">
+            <a href="culinaria.html">
+                <div
+                    class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-surface-light dark:bg-surface-dark cursor-pointer hover:shadow-[0_6px_16px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                        data-alt="An assortment of gourmet food on a dark table"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoZmirngNnNAHvIGiPEQfwdZVwE63SfKJtey2gGKVlOc-tGESEP3KU9d5y-FGd2_DfG7si3b2Na99Bmp0x6RiD_wwjvU4sC7hRGQBjWWw8UbNDYuoaFB2l1uqXIXIN-HJijyuWzi1vTQdrHxZWqKQTqjfuyfEG2GJexR_HjARPjtBa-OrfOFldi-lSx_L5h-yHIFec9_2R2PXynGHJZgOgJl2v1Gp2Q33DIdTz_d6AUHxPE-nfhGNSjEzaaqayabEoFmTk0J61eA");'>
+                    </div>
+                    <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1.5 p-4">
                         <p
-                            class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
-                            1 km de você • Praça Central</p>
-                        <p
-                            class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
-                            Sábado, 12h</p>
+                            class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">
+                            Festival Gastronômico Sabor da Cidade</p>
+                        <div class="flex flex-col gap-1">
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
+                                1 km de você • Praça Central</p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">
+                                Sábado, 12h</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </body>
-
+<script src="transitions.js"></script>
 </html>

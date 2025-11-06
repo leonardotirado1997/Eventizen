@@ -1,0 +1,217 @@
+/* ============================================
+   TRANSIÇÕES SUAVES ENTRE PÁGINAS
+   ============================================ */
+
+/* Reset e configurações base */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container principal com animação */
+.page-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estados de transição da página */
+.page-enter {
+    animation: pageEnter 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.page-exit {
+    animation: pageExit 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Animação de entrada - Fade + Scale */
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(10px);
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Animação de saída - Fade + Slide */
+@keyframes pageExit {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+/* Animação de entrada da direita (para navegação forward) */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Animação de entrada da esquerda (para navegação back) */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Aplicar animação quando a página carrega */
+body.page-loaded {
+    animation: pageEnter 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Animação para elementos internos (stagger effect) */
+.fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+.fade-in-up-delay-1 {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+    opacity: 0;
+}
+
+.fade-in-up-delay-2 {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Transição suave para links */
+a {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+a:active {
+    transform: scale(0.98);
+}
+
+/* Transição para botões */
+button, .btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active, .btn:active {
+    transform: scale(0.96);
+}
+
+/* Animação da logo */
+.logo-animate {
+    animation: logoPulse 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes logoPulse {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Overlay de transição */
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.03);
+    pointer-events: none;
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(1px);
+}
+
+.transition-overlay.active {
+    opacity: 1;
+}
+
+/* Efeito blur durante transição */
+body.transitioning {
+    overflow: hidden;
+}
+
+body.transitioning > * {
+    filter: blur(2px);
+    transition: filter 0.3s ease;
+}
+
+/* Responsividade - ajustes para mobile */
+@media (max-width: 768px) {
+    @keyframes pageEnter {
+        from {
+            opacity: 0;
+            transform: scale(0.99) translateY(5px);
+            filter: blur(2px);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            filter: blur(0);
+        }
+    }
+    
+    .page-enter {
+        animation-duration: 0.4s;
+    }
+    
+    .page-exit {
+        animation-duration: 0.3s;
+    }
+}
+
+/* Preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
