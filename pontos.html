@@ -70,11 +70,18 @@
             <!-- User Points Balance Card -->
             <div class="p-4 @container">
                 <div
-                    class="flex flex-col items-start justify-start rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] bg-white dark:bg-slate-800 p-4">
-                    <p class="text-xl font-bold leading-tight tracking-tighter text-text-light dark:text-text-dark">Seus
-                        pontos: 1.250</p>
-                    <p class="mt-1 text-base font-normal leading-normal text-slate-500 dark:text-slate-400">Continue
-                        participando de eventos para ganhar mais!</p>
+                    class="flex flex-col items-start justify-start rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] bg-gradient-to-br from-primary to-purple-600 dark:from-primary dark:to-purple-700 p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                    <div class="relative z-10 w-full">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="material-symbols-outlined text-white text-2xl">stars</span>
+                            <p class="text-white/90 text-sm font-medium leading-normal">Seus Pontos</p>
+                        </div>
+                        <p class="text-4xl font-bold leading-tight tracking-tighter text-white mb-2">1.250</p>
+                        <p class="text-white/80 text-base font-normal leading-normal">Continue
+                            participando de eventos para ganhar mais!</p>
+                    </div>
                 </div>
             </div>
             <!-- Section Header -->
